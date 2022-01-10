@@ -38,6 +38,8 @@ class Issues {
                 let unassigned_agent = await Agents.get_unassigned_agent();
                 let issue_id = created_issue.id;
 
+                console.log(unassigned_agent);
+
                 if (unassigned_agent.error === false) {
                     let support_agent_id = unassigned_agent.data[0].id;
 
@@ -55,6 +57,8 @@ class Issues {
 
                 }
             } else {
+                ResponseHelper.sendResponse(res, 500, [], "Error creating issue");
+
             }
 
 
