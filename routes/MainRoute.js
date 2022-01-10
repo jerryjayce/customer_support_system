@@ -3,9 +3,14 @@ const express = require("express");
 const router = express.Router();
 
 const MainController = require('../controllers/MainController');
+const IssuesController = require('../controllers/Issues');
 
-router.post('/create_issue', MainController.create_issue);
-router.put('/close_issue', MainController.close_issue);
+//issues
+router.post('/issues/create', IssuesController.create_issue);
+router.put('/issues/close', IssuesController.close_issue);
+
+
+//agent
 
 
 module.exports = router;
