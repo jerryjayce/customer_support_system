@@ -17,6 +17,9 @@ module.exports = {
       is_resolved: {
         type: Sequelize.INTEGER
       },
+      is_assigned: {
+        type: Sequelize.INTEGER
+      },
       user_id: {
         type: Sequelize.INTEGER
       },

@@ -17,7 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     issue_id: DataTypes.INTEGER,
     support_agent_id: DataTypes.INTEGER,
     user_id: DataTypes.INTEGER,
-    is_resolved: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'support_agent_issues',
