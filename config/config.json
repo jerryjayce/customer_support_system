@@ -1,11 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "support_system",
-    "host": "localhost",
-    "dialect": "mysql",
-    "port": "8080"
+    "username": "b85f698f4522ec",
+    "password": "5f91c3f6",
+    "database": "heroku_2e530b50f908649",
+    "host": "us-cdbr-east-05.cleardb.net",
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
