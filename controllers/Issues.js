@@ -116,10 +116,13 @@ class Issues {
                 return ResponseHelper.sendResponse(res, 200, [], "Issue already resolved");
             }
 
+            //if issue was assigned, make agent available
+            if (issue.is_assigned === 1) {
+                let agent_issue = await support_agent_issues.findOne({where: {issue_id}});
+                await Agents.toggle_agent_availability(agent_issue.support_agent_id);
+            }
             issue.is_resolved = 1;
-            let agent_issue = await support_agent_issues.findOne({where: {issue_id}});
 
-            await Agents.toggle_agent_availability(agent_issue.support_agent_id);
             await issue.save();
 
 
