@@ -43,6 +43,10 @@ class ResponseHelper {
                 break;
             case 405:
                 response["error"] = true;
+                response["message"] = message ? message : "Unprocessable Entity";
+                break;
+            case 422:
+                response["error"] = true;
                 response["message"] = message ? message : "Method Not Allowed";
                 break;
             case 500:
