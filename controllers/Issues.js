@@ -110,10 +110,10 @@ class Issues {
             });
 
             if (!issue) {
-                return ResponseHelper.sendResponse(res, 201, [], "Issue not found");
+                return ResponseHelper.sendResponse(res, 200, [], "Issue not found");
             }
             if (issue.is_resolved === 1) {
-                return ResponseHelper.sendResponse(res, 201, [], "Issue already resolved");
+                return ResponseHelper.sendResponse(res, 200, [], "Issue already resolved");
             }
 
             issue.is_resolved = 1;
