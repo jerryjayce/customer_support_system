@@ -12,6 +12,7 @@
    1.) Postman (Get request):
 
     link to postman documentation:
+    `https://documenter.getpostman.com/view/6871862/UVXete7T`
    
    2.) Curl:
   
